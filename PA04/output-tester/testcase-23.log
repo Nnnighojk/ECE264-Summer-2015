@@ -1,0 +1,11 @@
+
+/**
+ * Testcase 22 :: images/corrupt-testcases/08-height-wrong.ee264 
+ * File header specifies the wrong image height, meaning that you will not find the end of file when you expect to. (Image_load should return NULL.)
+ */
+stray bites foundError: failed to read 'images/corrupt-testcases/08-height-wrong.ee264'
+Attempt to read 'images/corrupt-testcases/08-height-wrong.ee264' as .ee264 format
+The comment is
+File generated from x.png on blakes-7 at Tue Jun 25 14:05:46 EDT 2013 by convert-all.sh
+Image_load(...) correctly returns NULL on corrupt image
+Testcase passed.

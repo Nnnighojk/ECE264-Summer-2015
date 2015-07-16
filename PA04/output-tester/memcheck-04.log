@@ -1,0 +1,76 @@
+==22305== Memcheck, a memory error detector
+==22305== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==22305== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==22305== Command: ./a.out images/bmps/05-unnormalized-sagan-stamp.bmp --normalize student-out-04_05-sagan-stamp.bmp
+==22305== Parent PID: 22304
+==22305== 
+--22305-- 
+--22305-- Valgrind options:
+--22305--    --tool=memcheck
+--22305--    --leak-check=full
+--22305--    --verbose
+--22305--    --log-file=memcheck-04.log
+--22305-- Contents of /proc/version:
+--22305--   Linux version 2.6.32-504.23.4.el6.x86_64 (mockbuild@x86-029.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-9) (GCC) ) #1 SMP Fri May 29 10:16:43 EDT 2015
+--22305-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--22305-- Page sizes: currently 4096, max supported 4096
+--22305-- Valgrind library directory: /usr/lib64/valgrind
+--22305-- Reading syms from /tmp/.hYC4n0/a.out
+--22305-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--22305--    object doesn't have a dynamic symbol table
+--22305-- Reading syms from /lib64/ld-2.12.so
+--22305--   Considering /usr/lib/debug/.build-id/5b/eb2450b75e84ff317c65f22af8b8112c25df63.debug ..
+--22305--   .. build-id is valid
+--22305-- Scheduler: using generic scheduler lock implementation.
+--22305-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==22305== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-22305-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==22305== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-22305-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==22305== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-22305-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==22305== 
+==22305== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==22305== don't want to do, unless you know exactly what you're doing,
+==22305== or are doing some strange experiment):
+==22305==   /usr/lib64/valgrind/../../bin/vgdb --pid=22305 ...command...
+==22305== 
+==22305== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==22305==   /path/to/gdb ./a.out
+==22305== and then give GDB the following command
+==22305==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=22305
+==22305== --pid is optional if only one valgrind process is running
+==22305== 
+--22305-- REDIR: 0x3c3fa176d0 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--22305-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--22305-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--22305-- REDIR: 0x3c3fa174e0 (index) redirected to 0x4a07c30 (index)
+--22305-- REDIR: 0x3c3fa17560 (strcmp) redirected to 0x4a08570 (strcmp)
+--22305-- Reading syms from /lib64/libc-2.12.so
+--22305--   Considering /usr/lib/debug/.build-id/c7/df056b7c109a41096296cd70702f2eada124b0.debug ..
+--22305--   .. build-id is valid
+--22305-- REDIR: 0x3c3fe84cd0 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--22305-- REDIR: 0x3c3fe86f90 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--22305-- REDIR: 0x3c3fe82c40 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--22305-- REDIR: 0x3c3fe7f6e0 (strcmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--22305-- REDIR: 0x3c3ff28350 (__strcmp_sse42) redirected to 0x4a084d0 (strcmp)
+--22305-- REDIR: 0x3c3fe81120 (strlen) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--22305-- REDIR: 0x3c3ff33620 (__strlen_sse42) redirected to 0x4a07f90 (strlen)
+--22305-- REDIR: 0x3c3fe8aaf0 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+--22305-- REDIR: 0x3c3fe84500 (mempcpy) redirected to 0x4a0a020 (mempcpy)
+--22305-- REDIR: 0x3c3fe7b520 (free) redirected to 0x4a063a9 (free)
+--22305-- REDIR: 0x3c3fe7a640 (malloc) redirected to 0x4a069ac (malloc)
+--22305-- REDIR: 0x3c3fe89670 (memcpy) redirected to 0x4a08b60 (memcpy)
+--22305-- REDIR: 0x3c3fe81160 (__GI_strlen) redirected to 0x4a07fb0 (__GI_strlen)
+--22305-- REDIR: 0x3c3fe839a0 (memset) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--22305-- REDIR: 0x3c3fe839e0 (__GI_memset) redirected to 0x4a09a50 (memset)
+==22305== 
+==22305== HEAP SUMMARY:
+==22305==     in use at exit: 0 bytes in 0 blocks
+==22305==   total heap usage: 8 allocs, 8 frees, 310,298 bytes allocated
+==22305== 
+==22305== All heap blocks were freed -- no leaks are possible
+==22305== 
+==22305== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+--22305-- 
+--22305-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--22305-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==22305== 
+==22305== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)

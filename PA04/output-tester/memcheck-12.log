@@ -1,0 +1,86 @@
+==23177== Memcheck, a memory error detector
+==23177== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23177== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23177== Command: ./a.out images/03-hawkes-bay-NZ.ee264 student-out-12_03-hawkes-bay-NZ.bmp
+==23177== Parent PID: 23176
+==23177== 
+--23177-- 
+--23177-- Valgrind options:
+--23177--    --tool=memcheck
+--23177--    --leak-check=full
+--23177--    --verbose
+--23177--    --log-file=memcheck-12.log
+--23177-- Contents of /proc/version:
+--23177--   Linux version 2.6.32-504.23.4.el6.x86_64 (mockbuild@x86-029.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-9) (GCC) ) #1 SMP Fri May 29 10:16:43 EDT 2015
+--23177-- Arch and hwcaps: AMD64, amd64-sse3-cx16-avx
+--23177-- Page sizes: currently 4096, max supported 4096
+--23177-- Valgrind library directory: /usr/lib64/valgrind
+--23177-- Reading syms from /tmp/.hYC4n0/a.out
+--23177-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--23177--    object doesn't have a dynamic symbol table
+--23177-- Reading syms from /lib64/ld-2.12.so
+--23177--   Considering /usr/lib/debug/.build-id/5b/eb2450b75e84ff317c65f22af8b8112c25df63.debug ..
+--23177--   .. build-id is valid
+--23177-- Scheduler: using generic scheduler lock implementation.
+--23177-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==23177== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-23177-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==23177== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-23177-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==23177== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-23177-by-nnighojk-on-ecegrid-thin4.ecn.purdue.edu
+==23177== 
+==23177== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==23177== don't want to do, unless you know exactly what you're doing,
+==23177== or are doing some strange experiment):
+==23177==   /usr/lib64/valgrind/../../bin/vgdb --pid=23177 ...command...
+==23177== 
+==23177== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==23177==   /path/to/gdb ./a.out
+==23177== and then give GDB the following command
+==23177==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=23177
+==23177== --pid is optional if only one valgrind process is running
+==23177== 
+--23177-- REDIR: 0x3c3fa176d0 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--23177-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--23177-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--23177-- REDIR: 0x3c3fa174e0 (index) redirected to 0x4a07c30 (index)
+--23177-- REDIR: 0x3c3fa17560 (strcmp) redirected to 0x4a08570 (strcmp)
+--23177-- Reading syms from /lib64/libc-2.12.so
+--23177--   Considering /usr/lib/debug/.build-id/c7/df056b7c109a41096296cd70702f2eada124b0.debug ..
+--23177--   .. build-id is valid
+--23177-- REDIR: 0x3c3fe84cd0 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--23177-- REDIR: 0x3c3fe86f90 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--23177-- REDIR: 0x3c3fe82c40 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--23177-- REDIR: 0x3c3fe7f6e0 (strcmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--23177-- REDIR: 0x3c3ff28350 (__strcmp_sse42) redirected to 0x4a084d0 (strcmp)
+--23177-- REDIR: 0x3c3fe81120 (strlen) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--23177-- REDIR: 0x3c3ff33620 (__strlen_sse42) redirected to 0x4a07f90 (strlen)
+--23177-- REDIR: 0x3c3fe8aaf0 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+--23177-- REDIR: 0x3c3fe84500 (mempcpy) redirected to 0x4a0a020 (mempcpy)
+--23177-- REDIR: 0x3c3fe7b520 (free) redirected to 0x4a063a9 (free)
+--23177-- REDIR: 0x3c3fe7a640 (malloc) redirected to 0x4a069ac (malloc)
+--23177-- REDIR: 0x3c3fe89670 (memcpy) redirected to 0x4a08b60 (memcpy)
+--23177-- REDIR: 0x3c3fe81160 (__GI_strlen) redirected to 0x4a07fb0 (__GI_strlen)
+--23177-- REDIR: 0x3c3fe839a0 (memset) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--23177-- REDIR: 0x3c3fe839e0 (__GI_memset) redirected to 0x4a09a50 (memset)
+==23177== 
+==23177== HEAP SUMMARY:
+==23177==     in use at exit: 568 bytes in 1 blocks
+==23177==   total heap usage: 7 allocs, 6 frees, 62,668 bytes allocated
+==23177== 
+==23177== Searching for pointers to 1 not-freed blocks
+==23177== Checked 65,056 bytes
+==23177== 
+==23177== LEAK SUMMARY:
+==23177==    definitely lost: 0 bytes in 0 blocks
+==23177==    indirectly lost: 0 bytes in 0 blocks
+==23177==      possibly lost: 0 bytes in 0 blocks
+==23177==    still reachable: 568 bytes in 1 blocks
+==23177==         suppressed: 0 bytes in 0 blocks
+==23177== Reachable blocks (those to which a pointer was found) are not shown.
+==23177== To see them, rerun with: --leak-check=full --show-reachable=yes
+==23177== 
+==23177== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+--23177-- 
+--23177-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--23177-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==23177== 
+==23177== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)

@@ -1,0 +1,11 @@
+
+/**
+ * Testcase 23 :: images/corrupt-testcases/09-incomplete-image.ee264 
+ * There is data missing from the end of the file. (Image_load should return NULL.)
+ */
+couldn't read data from fileError: failed to read 'images/corrupt-testcases/09-incomplete-image.ee264'
+Attempt to read 'images/corrupt-testcases/09-incomplete-image.ee264' as .ee264 format
+The comment is
+File generated from x.png on blakes-7 at Tue Jun 25 14:05:46 EDT 2013 by convert-all.sh
+Image_load(...) correctly returns NULL on corrupt image
+Testcase passed.

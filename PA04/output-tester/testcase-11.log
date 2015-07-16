@@ -1,0 +1,13 @@
+
+/**
+ * Testcase 10 :: images/01-smile.ee264 
+ * Test reading ee264 format
+ */
+Attempt to read 'images/01-smile.ee264' as .ee264 format
+The comment is
+Original BMP file: 01-smile.bmpSuccess.
+Writing out 'student-out-10_01-smile.bmp' in .bmp format
+Comparing student-out-10_01-smile.bmp with expected output: 
+./diff-plus student-out-10_01-smile.bmp images/bmps/01-smile.bmp
+Match.
+Testcase passed.
